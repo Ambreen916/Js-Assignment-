@@ -83,4 +83,30 @@ if (!isNaN(num1) && !isNaN(num2)) {
 
 // 9. Take two numbers and display whether their sum is even or odd.
 // 10. Create a simple calculator using prompt() that takes two numbers and an operator (+, -, , /), and performs the correct operation.
+var answer =  prompt([
+    { message: "Enter first number", type: "number", name: "firstNumber" },
+    { message: "Enter second number", type: "number", name: "secondNumber" },
+    {
+        message: "Select one of the operator to perform an action",
+        type: "list",
+        name: "operator",
+        choices: ["Addition", "Subtraction", "Multiplication", "Division"],
+    },
+]);
+//Conditional Statement
+if (answer.operator === "Addition") {
+    console.log(answer.firstNumber + answer.secondNumber);
+}
+else if (answer.operator === "Subtraction") {
+    console.log(answer.firstNumber - answer.secondNumber);
+}
+else if (answer.operator === "Multiplication") {
+    console.log(answer.firstNumber * answer.secondNumber);
+}
+else if (answer.operator === "Division") {
+    console.log(answer.firstNumber / answer.secondNumber);
+}
+else {
+    console.log("Please select valid operator.");
+}
 
